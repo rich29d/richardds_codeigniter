@@ -1,0 +1,198 @@
+@cor-lar: #aa3917;
+@cor-cin: #1c1c1c;
+@cor-bra: #FFF;
+@img: "../img";
+
+.sec-menu{
+  width: 100%;
+  height: 0;
+  margin-top: ~"calc(100vh - 48px)";
+  left: 0;
+
+  .cont-menu{ top:0; }
+  .cont-menu-mob{ bottom:0; }
+
+  .cont-menu,
+  .cont-menu-mob
+  {
+    height: 48px;
+    background: @cor-cin;
+    overflow: hidden;
+    padding-left: 18px;
+    width: 100%;
+    z-index: 10;
+
+
+    nav{
+      margin: 0;
+      margin-top: 3px;
+      text-align: right;
+    }
+
+    ul{
+      padding-top: 2px;
+      margin-left: 60px;
+      display: inline;
+    }
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-right: 4%;
+      color: @cor-bra;
+
+      a {
+        color: @cor-bra;
+        font-size: 29px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0 12px;
+        transition: font-size .5s ease;
+      }
+
+      .effect-hover {
+        transform: rotate(45deg);
+        height: 315px;
+        top: -130px;
+      }
+
+      .bar-effect {
+        width: 21%;
+        margin-left: -2%;
+        height: 1px;
+        background: @cor-cin;
+        transition: height .5s ease;
+        float: left;
+      }
+
+      .bar-effect.bar-1 {
+        transition: all .3s ease;
+      }
+      .bar-effect.bar-2 {
+        transition: all .6s ease;
+      }
+      .bar-effect.bar-3 {
+        transition: all 1.2s ease;
+      }
+      .bar-effect.bar-4 {
+        transition: all 1.5s ease;
+      }
+      .bar-effect.bar-5 {
+        transition: all 1.8s ease;
+      }
+
+    }
+
+    .logo-scroll{
+
+      left: -30px;
+      top: 10%;
+      width: 26px;
+      height: 37px;
+      background: url("@{img}/logo-rs.png") left center no-repeat;
+      background-size: cover;
+      transition: left .5s ease;
+
+    }
+
+    &.fixed {
+      nav{ margin-top: 3px }
+      .bar-effect { width: 20%; }
+      .effect-hover { height: 312px; }
+      .logo-scroll{ left: 2%; }
+    }
+
+  }
+
+  li:hover,
+  li.selected{
+    .bar-effect{
+      background: @cor-lar;
+      height: 300px;
+    }
+  }
+
+  .cont-cel{
+    top: -360px;
+    left: auto;
+    right: 145px;
+    width: 300px;
+    display:none;
+
+    .txt-hey-cel{
+      text-align: center;
+      img{ width: 70%}
+    }
+
+    .cel{
+      width: 300px;
+      height: 539px;
+      background: url("@{img}/cel.png") center center no-repeat;
+      background-size: contain;
+      display: inline-block;
+
+      .box-cel {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 13px;
+        width: 150px;
+        margin: auto;
+      }
+
+      .txt-acesse-cel{
+
+        margin-top: 50px;
+
+        span{
+          display: block;
+          width: 30px;
+          height: 1px;
+          background: #FFF;
+          margin-top: 8px;
+        }
+
+        span.esq{ float: left; }
+        span.dir{ float: right;}
+
+      }
+
+      .link-cel{
+        width: 148px;
+        border: 1px solid #FFF;
+        padding: 12px 0;
+        margin-top: 50px;
+      }
+
+      .qr-code-cel{ margin-top: 115px; }
+
+    }
+
+  }
+
+  @media screen and (max-width: 650px){
+    .cont-menu,
+    .cont-menu-mob
+    { padding-left: 0;
+
+      ul{
+        padding: 0;
+        margin: 0;
+        margin-top: 6px;
+        width: 100%;
+        text-align: center;
+        display: block;
+
+        li{
+          margin: 0;
+          a{
+            font-size: 25px;
+            text-align: center;
+          }
+        }
+
+      }
+
+    }
+  }
+
+}

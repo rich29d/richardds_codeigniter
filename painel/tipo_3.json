@@ -1,0 +1,8 @@
+{
+  "itens": [
+	   	{"<img src='https://randomuser.me/api/portraits/men/46.jpg'/>"},
+	   	{"<img src='https://randomuser.me/api/portraits/men/41.jpg'/>"},
+   		{"<img src='https://randomuser.me/api/portraits/women/34.jpg'/>"},           ],
+  "velocidade_scroll": 10,
+  "itens_por_linha": 3
+}
